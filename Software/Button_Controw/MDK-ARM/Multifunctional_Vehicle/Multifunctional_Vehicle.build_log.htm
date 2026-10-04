@@ -1,0 +1,129 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.41.0.0
+Copyright (C) 2024 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Leo Yu Yang CHEN, HKUST, LIC=HN0AE-5LXM9-747S0-BE7WB-DTA52-IB3LZ
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.41.0.0
+Toolchain Path:  C:\Users\leo\AppData\Local\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.41.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.3.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\leo\Documents\!Library\Software\42Stepper_Arm_WithServo\MDK-ARM\Multifunctional_Vehicle.uvprojx
+Project File Date:  04/26/2026
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Users\leo\AppData\Local\Keil_v5\ARM\ARM_Compiler_5.06u7\Bin'
+Rebuild target 'Multifunctional_Vehicle'
+assembling startup_stm32f407xx.s...
+compiling tim.c...
+compiling usart.c...
+compiling gpio.c...
+compiling stm32f4xx_hal_msp.c...
+compiling stm32f4xx_hal_flash.c...
+compiling can.c...
+../Core/Src/can.c(137): warning:  #223-D: function "memcpy" declared implicitly
+      memcpy(can_rx_last_data, rxbuf, len);
+../Core/Src/can.c: 1 warning, 0 errors
+compiling stm32f4xx_hal_rcc_ex.c...
+compiling stm32f4xx_hal_flash_ramfunc.c...
+compiling stm32f4xx_hal_flash_ex.c...
+compiling main.c...
+compiling stm32f4xx_hal_can.c...
+compiling stm32f4xx_it.c...
+compiling stm32f4xx_hal_rcc.c...
+compiling stm32f4xx_hal_dma.c...
+compiling stm32f4xx_hal.c...
+compiling stm32f4xx_hal_exti.c...
+compiling system_stm32f4xx.c...
+compiling stm32f4xx_hal_pwr_ex.c...
+compiling stm32f4xx_hal_cortex.c...
+compiling stm32f4xx_hal_gpio.c...
+compiling OLED_Data.c...
+compiling stm32f4xx_hal_pwr.c...
+compiling End_Effector.c...
+..\User\End_Effector.c(46): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      return deg * (float)(M_PI / 180.0);
+..\User\End_Effector.c(182): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      float phi_rad = (float)(M_PI / 2.0) + theta_sum_rad;
+..\User\End_Effector.c(183): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      while (phi_rad >  (float)M_PI)  phi_rad -= (float)(2.0 * M_PI);
+..\User\End_Effector.c(184): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      while (phi_rad < -(float)M_PI)  phi_rad += (float)(2.0 * M_PI);
+..\User\End_Effector.c(185): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      float phi_deg = phi_rad * (float)(180.0 / M_PI);
+..\User\End_Effector.c(198): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      while (phi_rad >  (float)M_PI)  phi_rad -= (float)(2.0 * M_PI);
+..\User\End_Effector.c(199): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      while (phi_rad < -(float)M_PI)  phi_rad += (float)(2.0 * M_PI);
+..\User\End_Effector.c(200): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      float phi_deg = phi_rad * (float)(180.0 / M_PI);
+..\User\End_Effector.c: 8 warnings, 0 errors
+compiling stm32f4xx_hal_dma_ex.c...
+compiling stm32f4xx_hal_tim_ex.c...
+compiling stm32f4xx_hal_uart.c...
+compiling stm32f4xx_hal_tim.c...
+compiling Key.c...
+compiling LED.c...
+compiling MyCAN.c...
+compiling TTL_Servo.c...
+..\User\TTL_Servo.c(214): warning:  #223-D: function "atoi" declared implicitly
+      int val = atoi(p);
+..\User\TTL_Servo.c: 1 warning, 0 errors
+compiling process_frame.c...
+..\User\process_frame.c(91): warning:  #223-D: function "printf" declared implicitly
+                  printf("帧长度不足 \r\n");
+..\User\process_frame.c(118): warning:  #223-D: function "printf" declared implicitly
+              if(frame->data[0] == 1) printf("校准中！ \r\n");
+..\User\process_frame.c(119): warning:  #223-D: function "printf" declared implicitly
+              else if(frame->data[0] == 2) printf("校准失败 \r\n");
+..\User\process_frame.c(120): warning:  #223-D: function "printf" declared implicitly
+              else if(frame->data[0] == 3) printf("校准成功 \r\n");
+..\User\process_frame.c(124): warning:  #223-D: function "printf" declared implicitly
+              printf("复位成功\r\n");
+..\User\process_frame.c: 5 warnings, 0 errors
+compiling Stepper_Arm.c...
+compiling OLED.c...
+compiling smd.c...
+linking...
+Program Size: Code=22960 RO-data=2624 RW-data=108 ZI-data=3636  
+FromELF: creating hex file...
+"Multifunctional_Vehicle\Multifunctional_Vehicle.axf" - 0 Error(s), 15 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS.6.1.0.pack
+                ARM::CMSIS@6.1.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 6.1.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F4xx_DFP.3.1.1.pack
+                Keil::STM32F4xx_DFP@3.1.1
+                STMicroelectronics STM32F4 Series Device Support
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Multifunctional_Vehicle
+  C:/Users/leo/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@6.1.0
+      Include file:  CMSIS/Core/Include/tz_context.h
+Build Time Elapsed:  00:00:08
+</pre>
+</body>
+</html>
